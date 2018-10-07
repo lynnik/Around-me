@@ -56,9 +56,6 @@ dependencies {
     // Rx java
     implementation "io.reactivex.rxjava2:rxandroid:$rx_java_version"
 
-    // Rx permissions
-    implementation "com.github.tbruyelle:rxpermissions:$rxpermissions_version"
-
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
@@ -75,8 +72,4 @@ dependencies {
     testImplementation "junit:junit:$junit_version"
     androidTestImplementation "androidx.test:runner:$test_runner_version"
     androidTestImplementation "androidx.test.espresso:espresso-core:$test_espresso_version"
-
-    implementation 'com.google.android.gms:play-services-maps:16.0.0'
-
-    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
 }
