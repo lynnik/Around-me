@@ -1,0 +1,82 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion "$compile_sdk_version".toInteger()
+    defaultConfig {
+        applicationId "$application_id"
+        minSdkVersion "$min_sdk_version".toInteger()
+        targetSdkVersion "$target_sdk_version".toInteger()
+        versionCode "$version_code".toInteger()
+        versionName "$version_name"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        android.applicationVariants.all { variant ->
+            variant.outputs.all { output ->
+                outputFileName = "${variant.applicationId}_" +
+                        "version_${variant.versionName}_" +
+                        "version_code_${variant.versionCode}_" +
+                        "${variant.buildType.name}.apk"
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled true
+            useProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            shrinkResources true
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // Android X
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+
+    // Design
+    implementation "com.google.android.material:material:$material_version"
+
+    // Timber (log)
+    implementation "com.jakewharton.timber:timber:$timber_version"
+
+    // Rx java
+    implementation "io.reactivex.rxjava2:rxandroid:$rx_java_version"
+
+    // Rx permissions
+    implementation "com.github.tbruyelle:rxpermissions:$rxpermissions_version"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    // Okhttp
+    implementation "com.squareup.okhttp3:okhttp:$okhttp_version"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
+
+    // Google maps
+    implementation "com.google.android.gms:play-services-maps:$play_services_maps_version"
+
+    // Testing
+    testImplementation "junit:junit:$junit_version"
+    androidTestImplementation "androidx.test:runner:$test_runner_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$test_espresso_version"
+
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+}
