@@ -37,6 +37,21 @@ android {
         }
     }
 
+    signingConfigs {
+        debug {
+            storeFile file("../keystore/debug.keystore")
+            storePassword "aroundmedebug"
+            keyAlias "AroundMeDebug"
+            keyPassword "aroundmedebug"
+        }
+        release {
+            storeFile file("../keystore/release.keystore")
+            storePassword "aroundmerelease"
+            keyAlias "AroundMeRelease"
+            keyPassword "aroundmerelease"
+        }
+    }
+
     buildTypes {
         debug {
             minifyEnabled true
@@ -46,6 +61,8 @@ android {
             ext.betaDistributionReleaseNotes = "Release Notes for this build."
             ext.betaDistributionGroupAliases = "around-me-testers"
             ext.betaDistributionNotifications = true
+
+            signingConfig signingConfigs.debug
         }
         release {
             shrinkResources true
@@ -55,6 +72,8 @@ android {
             ext.betaDistributionReleaseNotes = "Release Notes for this build."
             ext.betaDistributionGroupAliases = "around-me-testers"
             ext.betaDistributionNotifications = true
+
+            signingConfig signingConfigs.release
         }
     }
 }
