@@ -23,7 +23,7 @@ android {
             versionProps.store(versionPropsFile.newWriter(), null)
 
             versionCode versionBuild
-            versionName "${versionMajor}.${versionMinor}." + String.format("%05d", versionBuild)
+            versionName "${versionMajor}.${versionMinor}.${versionBuild}"
         }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
