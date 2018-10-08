@@ -33,6 +33,10 @@ android {
             shrinkResources true
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            ext.betaDistributionEmails = "lynnik.v@gmail.com"
+            ext.betaDistributionNotifications = true
+            ext.betaDistributionReleaseNotes = 'Test apk'
         }
     }
 }
