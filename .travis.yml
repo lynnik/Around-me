@@ -4,5 +4,5 @@ android:
   components:
     - build-tools-28.0.2
     - android-28
-  after_script:
+  script:
     - ./gradlew crashlyticsUploadDistributionRelease
