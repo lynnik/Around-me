@@ -37,30 +37,24 @@ android {
         }
     }
 
-    signingConfigs{
-        release{
-            storeFile file("demo-keystore.jks")
-            storePassword "demodemodemo"
-            keyAlias "demo"
-            keyPassword "demodemodemo"
-        }
-    }
-
     buildTypes {
         debug {
             minifyEnabled true
             useProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+            ext.betaDistributionReleaseNotes = "Release Notes for this build."
+            ext.betaDistributionGroupAliases = "around-me-testers"
+            ext.betaDistributionNotifications = true
         }
         release {
             shrinkResources true
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
-            ext.betaDistributionGroupAliases = "beta"
-            ext.betaDistributionReleaseNotesFilePath = "beta_release_notes.txt"
-
-            signingConfig signingConfigs.release
+            ext.betaDistributionReleaseNotes = "Release Notes for this build."
+            ext.betaDistributionGroupAliases = "around-me-testers"
+            ext.betaDistributionNotifications = true
         }
     }
 }
