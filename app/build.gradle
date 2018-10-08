@@ -12,7 +12,7 @@ android {
 
         def versionPropsFile = file('version.properties')
         if (versionPropsFile.canRead()) {
-            def Properties versionProps = new Properties()
+            Properties versionProps = new Properties()
             versionProps.load(new FileInputStream(versionPropsFile))
 
             def versionMajor = versionProps['VERSION_MAJOR'].toInteger()
@@ -49,6 +49,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
 
             ext.betaDistributionGroupAliases = "beta"
+            ext.betaDistributionReleaseNotesFilePath = "beta_release_notes.txt"
         }
     }
 }
@@ -95,6 +96,6 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$test_espresso_version"
 
     implementation('com.crashlytics.sdk.android:crashlytics:2.9.5@aar') {
-        transitive = true;
+        transitive = true
     }
 }
