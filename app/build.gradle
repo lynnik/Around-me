@@ -37,6 +37,15 @@ android {
         }
     }
 
+    signingConfigs{
+        release{
+            storeFile file("demo-keystore.jks")
+            storePassword "demodemodemo"
+            keyAlias "demo"
+            keyPassword "demodemodemo"
+        }
+    }
+
     buildTypes {
         debug {
             minifyEnabled true
@@ -50,6 +59,8 @@ android {
 
             ext.betaDistributionGroupAliases = "beta"
             ext.betaDistributionReleaseNotesFilePath = "beta_release_notes.txt"
+
+            signingConfig signingConfigs.release
         }
     }
 }
