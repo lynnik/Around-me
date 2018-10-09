@@ -1,0 +1,67 @@
+1:20:55 AM: Executing task 'detektCheck'...
+
+Executing tasks: [detektCheck]
+
+:detektCheck
+............................
+
+28 kotlin files were analyzed.
+
+Ruleset: comments
+Ruleset: complexity
+Ruleset: empty-blocks
+Ruleset: exceptions
+Ruleset: naming
+Ruleset: performance
+Ruleset: potential-bugs
+Ruleset: style - 2h 20min debt
+	NewLineAtEndOfFile - [App.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\App.kt:23:1
+	NewLineAtEndOfFile - [Api.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\data\Api.kt:17:1
+	NewLineAtEndOfFile - [CommonThrowable.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\data\error\CommonThrowable.kt:6:22
+	NewLineAtEndOfFile - [ErrorHandler.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\data\error\ErrorHandler.kt:37:1
+	NewLineAtEndOfFile - [NoInternetConnectionException.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\data\error\NoInternetConnectionException.kt:7:94
+	NewLineAtEndOfFile - [RemoteDataStore.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\data\RemoteDataStore.kt:9:1
+	NewLineAtEndOfFile - [RemoteSettings.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\data\RemoteSettings.kt:10:1
+	NewLineAtEndOfFile - [RetrofitCreator.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\data\RetrofitCreator.kt:36:1
+	NewLineAtEndOfFile - [Geometry.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\domain\models\Geometry.kt:8:1
+	NewLineAtEndOfFile - [Location.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\domain\models\Location.kt:8:1
+	NewLineAtEndOfFile - [Northeast.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\domain\models\Northeast.kt:8:1
+	NewLineAtEndOfFile - [OpeningHours.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\domain\models\OpeningHours.kt:7:1
+	NewLineAtEndOfFile - [Photo.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\domain\models\Photo.kt:10:1
+	NewLineAtEndOfFile - [PlacesResponse.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\domain\models\PlacesResponse.kt:10:1
+	NewLineAtEndOfFile - [PlusCode.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\domain\models\PlusCode.kt:8:1
+	NewLineAtEndOfFile - [Result.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\domain\models\Result.kt:20:1
+	NewLineAtEndOfFile - [Southwest.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\domain\models\Southwest.kt:8:1
+	NewLineAtEndOfFile - [Viewport.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\domain\models\Viewport.kt:8:1
+	NewLineAtEndOfFile - [Repository.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\domain\Repository.kt:12:1
+	NewLineAtEndOfFile - [Context.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\extensions\Context.kt:12:77
+	NewLineAtEndOfFile - [Disposable.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\extensions\Disposable.kt:9:1
+	NewLineAtEndOfFile - [View.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\extensions\View.kt:7:1
+	NewLineAtEndOfFile - [BaseActivity.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\presentation\base\BaseActivity.kt:41:1
+	NewLineAtEndOfFile - [BaseViewModel.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\presentation\base\BaseViewModel.kt:32:1
+	NewLineAtEndOfFile - [MapsViewModel.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\presentation\maps\MapsViewModel.kt:40:1
+	MagicNumber - [radius] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\presentation\maps\MapsViewModel.kt:19:22
+	NewLineAtEndOfFile - [NetworkConnectivity.kt] at C:\Users\lynnik\Desktop\Around-me\app\src\main\java\com\lynnik\aroundme\util\NetworkConnectivity.kt:19:1
+
+Overall debt: 2h 20min
+
+Complexity Report:
+	- 595 lines of code (loc)
+	- 472 source lines of code (sloc)
+	- 275 logical lines of code (lloc)
+	- 9 comment lines of code (cloc)
+	- 70 McCabe complexity (mcc)
+	- 27 number of total code smells
+	- 1 % comment source ratio
+	- 254 mcc per 1000 lloc
+	- 98 code smells per 1000 lloc
+
+Project Statistics:
+	- number of properties: 32
+	- number of functions: 43
+	- number of classes: 20
+	- number of packages: 10
+	- number of kt files: 28
+
+Exception in thread "main" io.gitlab.arturbosch.detekt.cli.console.BuildFailure: Build failed with 27 weighted issues (threshold defined was 10).
+:detektCheck FAILED

@@ -1,0 +1,6 @@
+apply plugin: "io.gitlab.arturbosch.detekt"
+detekt {
+    toolVersion = "1.0.0.RC6-2"
+    input = files("src/main/kotlin")
+    filters = ".*/resources/.*,.*/build/.*"
+}
