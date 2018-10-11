@@ -4,6 +4,4 @@ android:
     - build-tools-28.0.2
     - android-28
   script:
-    - ./gradlew assembleRelease
-  after_script:
-    - ./gradlew crashlyticsUploadDistributionRelease
+    - ./gradlew assembleRelease crashlyticsUploadDistributionRelease
