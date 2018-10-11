@@ -5,3 +5,7 @@ android:
     - android-28
   script:
     - ./gradlew assembleRelease crashlyticsUploadDistributionRelease
+    
+ # read this to configure Travis 
+ # https://medium.com/@harmittaa/travis-ci-android-example-357f6e632fc4 
+ # https://docs.travis-ci.com/user/languages/android/
