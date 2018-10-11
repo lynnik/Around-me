@@ -4,6 +4,8 @@ android:
     - build-tools-28.0.2
     - android-28
   script:
-    - ./gradlew assembleRelease
-  after_script:
-    - ./gradlew crashlyticsUploadDistributionRelease
+    - ./gradlew assembleRelease crashlyticsUploadDistributionRelease
+    
+ # read this to configure Travis 
+ # https://medium.com/@harmittaa/travis-ci-android-example-357f6e632fc4 
+ # https://docs.travis-ci.com/user/languages/android/
